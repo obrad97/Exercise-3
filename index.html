@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Pod request access landing page</title>
-</head>
-<body>
-  Publish your podcasts everywhere.
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/favicon-32x32.png"
+        />
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-  Request access
-</body>
+        <title>Frontend Mentor | Pod request access landing page</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="pod-access-card">
+                <img
+                    class="img-logo"
+                    src="assets/desktop/logo.svg"
+                    alt="logo"
+                />
+                <img
+                    class="bg-dots"
+                    src="assets/desktop/bg-pattern-dots.svg"
+                    alt="bg-pattern-dots"
+                />
+                <section class="bg-img"></section>
+                <main class="main-content">
+                    <h1 class="headline">
+                        Publish your podcasts <span>everywhere.</span>
+                    </h1>
+                    <p class="description">
+                        Upload your audio to Pod with a single click. We’ll then
+                        distribute your podcast to Spotify, Apple Podcasts,
+                        Google Podcasts, Pocket Casts and more!
+                    </p>
+                    <form id="form">
+                        <input
+                            class="e-mail"
+                            id="email"
+                            placeholder="Email address"
+                            type="text"
+                        />
+                        <button class="btn" type="button" id="btn">
+                            Request Access
+                        </button>
+                    </form>
+                    <div class="supported-platforms">
+                        <img
+                            class="spotify-svg"
+                            src="assets/desktop/spotify.svg"
+                            alt="spotify"
+                        />
+                        <img
+                            class="apple-podcast-svg"
+                            src="assets/desktop/apple-podcast.svg"
+                            alt="apple-podcast"
+                        />
+                        <img
+                            class="google-podcasts-svg"
+                            src="assets/desktop/google-podcasts.svg"
+                            alt="google-podcasts"
+                        />
+                        <img
+                            class="pocket-casts-svg"
+                            src="assets/desktop/pocket-casts.svg"
+                            alt="pocket-casts"
+                        />
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="assets/js/index.js"></script>
+    </body>
 </html>

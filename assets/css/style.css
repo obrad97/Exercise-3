@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --green: #54E6AF;
+    --lightGreen: #B3FFE2;
+    --darkBlue: #121725;
+    --darkGrey: #2C344B;
+    --grey: #5A668A;
+    --lightGrey: #C2CBE5;
+}
+
+body {
+    background-color: var(--darkBlue);
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Chivo', sans-serif;
+}
+
+.pod-access-card {
+    height: 75%;
+    width: 85%;
+    position: relative;
+}
+
+.bg-dots {
+    position: absolute;
+    right: 0;
+    bottom: -53px;
+}
+
+.img-logo {
+    position: absolute;
+    left: 0;
+    top: -30px;
+}
+
+.bg-img {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    background: url("/assets/desktop/image-host.jpg") no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 69%;
+}
+
+.main-content {
+    position: absolute;
+    background: var(--darkBlue) ;
+    z-index: 1;
+    height: 509px;
+    width: 723px;
+    bottom: 0;
+}
+
+.headline {
+    margin-top: 88px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #54E6AF;
+}
+
+.headline span {
+    color: var(--white);
+}
+
+.description {
+    margin-top: 24px;
+    padding-right: 38%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--lightGrey);
+}
+
+form {
+    position: relative;
+    margin-top: 40px;
+}
+
+.e-mail {
+    height: 56px;
+    width: 427px;
+    border-radius: 28px;
+    padding: 14px 32px 14px 32px;
+    outline: none;
+    border: none;
+    background: var(--darkGrey);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+}
+
+.e-mail::-webkit-input-placeholder { 
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.e-mail::-moz-placeholder { 
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.e-mail:-ms-input-placeholder { 
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.e-mail:-moz-placeholder { 
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.btn {
+    font-family: 'Chivo', sans-serif;
+    position: absolute;
+    left: 260px;
+    top: 5px;
+    height: 46px;
+    width: 162px;
+    border: none;
+    border-radius: 28px;
+    background: var(--green);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--darkBlue);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: var(--lightGreen);
+}
+
+.error-msg {
+    color: red;
+    margin: 8px 0 0 32px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FB3E3E;
+}
+
+.supported-platforms{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.spotify-svg{
+    margin-right: 40px ;
+}
+
+.apple-podcast-svg {
+    margin-right: 41px ;
+}
+
+.google-podcasts-svg {
+    margin-right: 27px;
+    margin-bottom: 4px;
+}
+
+@media only screen and (max-width:1024px) {
+    .container {
+        align-items: unset;
+        height: 1024px;
+    }
+
+    .bg-dots {
+        left: 0;
+        bottom: -30%;
+    }
+
+    .img-logo {
+        top: 5%;
+    }
+    
+    .pod-access-card {
+        width: 95%;
+        height: 767px;
+    }
+
+    .bg-img {
+        background: url('/assets/tablet/image-host.jpg') no-repeat;
+        background-size: cover;
+        width: 67%;
+    }
+
+    .main-content {
+        width: 635px;
+        height: 509px;
+    }
+
+    .headline {
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .description {
+        padding-right: 29%;
+    }
+}
+
+@media only screen and (max-width:670px) { 
+    body {
+        height: none;
+    }
+
+    .container {
+        display: block;
+        height: 100%;
+        background: var(--darkBlue); 
+        background: -webkit-linear-gradient(rgba(18,23,37,0.8), rgba(18,23,37,0.8)), url("/assets/mobile/image-host.jpg");
+        background: linear-gradient(rgba(18,23,37,0.8), rgba(18,23,37,0.8)), url("/assets/mobile/image-host.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .bg-dots {
+        display: none;
+    }
+
+    .img-logo {
+        position: static;
+        margin-top: 62px;
+    }
+
+    .pod-access-card {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .bg-img {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        position: static;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        background: none;
+    }
+
+    .headline {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .description {
+        padding: 0;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    #form {
+        grid-area: 4 / 1 / 5 / 2;
+        height: 150px;
+
+    }
+    
+    .e-mail{
+        margin: 0 auto 15px auto;
+        height: 46px;
+        width: 100%;
+        display: block;
+    }
+
+    .btn {
+        margin: 0 auto;
+        position: static;
+        display: block;
+        height: 46px;
+        width: 100%;
+    }
+
+    .error-msg {
+        margin-left: 0;
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .supported-platforms {
+        position: static;
+        grid-area: 3 / 1 / 4 / 2;
+        margin: 33px  auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .spotify-svg{
+        width: 56px;
+        margin: 0;
+    }
+    
+    .apple-podcast-svg {
+        width: 45px;
+        margin: 0;
+    }
+    
+    .google-podcasts-svg {
+        width: 73px;
+        margin: 0;
+    }
+
+    .pocket-casts-svg {
+        width: 77px;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width:350px) { 
+    body {
+        height: auto;
+    }
+
+    .container {
+        overflow: scroll;
+    }
+
+    .pod-access-card {
+        padding: 0 10px;
+    }
+}
